@@ -1,0 +1,2 @@
+1-Corregir errores/horrores ortográficos
+2-Implementar el algoritmo de recomendacion de libros (Grecia)

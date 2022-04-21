@@ -1,9 +1,9 @@
 #Secuencia inicial en donde se preguntan los datos del usuario    
 print("Hola!, soy Venus y te ayudare con tus estadisticas de lectura")
 print("Hagamos unas preguntas para conocernos")
-nombre = input("¿Como te llamas?")
-generosFav = input("¿Que generos te gusta leer más?")
-opcion = input("¿Estas leyendo un libro por el momento? S/N")
+nombre = input("¿Como te llamas?: ")
+generosFav = input("¿Que generos te gusta leer más?: ")
+opcion = input("¿Estas leyendo un libro por el momento? S/N : ")
 opcion = opcion.lower()
 #Determina si esta leyendo algo o no, si si esta leyendo algo pide los datos del libro,
 #si no, recomienda un libro

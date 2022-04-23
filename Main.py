@@ -1,31 +1,21 @@
-#Secuencia inicial en donde se preguntan los datos del usuario    
-print("Hola!, soy Venus y te ayudare con tus estadisticas de lectura")
-print("Hagamos unas preguntas para conocernos")
-nombre = input("¿Como te llamas?: ")
-generosFav = input("¿Que generos te gusta leer más?: ")
-opcion = input("¿Estas leyendo un libro por el momento? S/N : ")
-opcion = opcion.lower()
-#Determina si esta leyendo algo o no, si si esta leyendo algo pide los datos del libro,
-#si no, recomienda un libro
-if opcion ==  "s":
-    print("Interesante!, dejame saber un poco más de ese libro")
-    nombreLibro = input("¿Como se llama el libro?: ")
-    autorLibro = input("¿Quien lo escribió?: ")
-    paginasTotal = float(input("¿Cuantas paginas tiene en total?: "))
-    paginasLeidas = float(input("¿Cuantas paginas has leido hasta el momento?: "))
-    print("")
-    print("Wow, esas estadisticas son muy impresionantes!")
-    estaLeyendo = f"Actualmente leyendo : {nombreLibro}"
-elif opcion == "n":
-    estaLeyendo = "Actualmente no esta leyendo"
-    #Implementar a Grecia
-    print("Por el momento nuestros prgramadores no han resuelto esto, vuelve pronto!")
-else:
-    print("Se ha intoducido una opcion invalida, vuelva a intentarlo")
+from Usuario import *
+from Libro import *
 
-#Ficha de datos del usuario    
-print("")
-print("||| Ficha de usuario")
-print(f"||| Nombre: {nombre}")
-print(f"||| Generos favoritos: {generosFav}")
-print(f"||| Estatus actual: {estaLeyendo}")
+print("Hola!, soy Venus y estoy aquí para ser tu compañera de lecturas!")
+print("Hagamos unas preguntas para conocernos mejor")
+print("----------------------------------------------------------------")
+nombreUsr = input("¿Cual es tu nombre?: ")
+generoFav = input("¿Cual es tu genero favorito?: ")
+estadoActual = input("¿Estas leyendo algo por ahora? Escribe si o no: ")
+estadoActual.lower()
+#Se determina es estado actual del usr (leyendo o no)
+if estadoActual == "si":
+    estadoActual = True
+elif estadoActual == "no":
+    estadoActual = False
+else:
+    print("Se ha introducido una opcion incorrecta")
+
+#Se crea el usuario con los datos
+nombreUsr = Usuario(nombreUsr,generoFav,estadoActual)
+nombreUsr.mostrarDatosUsr()
